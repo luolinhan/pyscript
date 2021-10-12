@@ -37,7 +37,7 @@ def login():
     pwd=request.values.get('pwd')
     #判断用户名、密码都不为空，如果不传用户名、密码则username和pwd为None
     if username and pwd:
-        if username == 'lhluo' and pwd == '111':
+        if username == 'lhluo' and pwd == '1111':
             resu={'code':200,'message':'登录成功'}
             return json.dumps(resu,ensure_ascii=False)#将字典转换为Json串，json是字符串
         else:
