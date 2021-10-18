@@ -27,7 +27,7 @@ flask: seb框架，通过flask提供的装饰器@server.route()将普通函数�
 
 #创建一个服务，把当前这个python文件当做一个服务
 server = flask.Flask(__name__)
-
+#访问地址 http://10.5.169.41:8888/login?username=lhluo&pwd=1
 #server.route()可以将普通函数转变为服务　登录接口的路径、请求方式
 @server.route('/login',methods=['get','post'])
 def login():
@@ -37,7 +37,7 @@ def login():
     pwd=request.values.get('pwd')
     #判断用户名、密码都不为空，如果不传用户名、密码则username和pwd为None
     if username and pwd:
-        if username == 'lhluo' and pwd == '1111':
+        if username == 'lhluo' and pwd == '1':
             resu={'code':200,'message':'登录成功'}
             return json.dumps(resu,ensure_ascii=False)#将字典转换为Json串，json是字符串
         else:
