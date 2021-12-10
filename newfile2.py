@@ -27,7 +27,7 @@ flask: seb框架，通过flask提供的装饰器@server.route()将普通函数�
 
 #创建一个服务，把当前这个python文件当做一个服务
 server = flask.Flask(__name__)
-#访问地址 http://10.5.169.41:8888/login?username=lhluo&pwd=1
+#访问地址 http://127.0.0.1:8888/login?username=lhluo&pwd=1
 #server.route()可以将普通函数转变为服务　登录接口的路径、请求方式
 @server.route('/login',methods=['get','post'])
 def login():
